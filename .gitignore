@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# carpetas propias del proyecto
+material_adicional_libro/
