@@ -52,6 +52,25 @@
    <addaction name="actionInsertar_la_imagen"/>
    <addaction name="actionBorrar_la_imagen"/>
   </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <property name="minimumSize">
+     <size>
+      <width>250</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>250</width>
+      <height>463</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
   <action name="actionInsertar_la_imagen">
    <property name="icon">
     <iconset resource="../recursos/recursos_1.qrc">
