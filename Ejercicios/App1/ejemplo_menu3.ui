@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>773</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>773</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuInsertar">
+    <property name="title">
+     <string>Insertar</string>
+    </property>
+    <addaction name="actionInsertar_la_imagen"/>
+   </widget>
+   <widget class="QMenu" name="menuBorrar">
+    <property name="title">
+     <string>Borrar</string>
+    </property>
+    <addaction name="actionBorrar_la_imagen"/>
+   </widget>
+   <widget class="QMenu" name="menuBuscar">
+    <property name="title">
+     <string>Buscar</string>
+    </property>
+    <addaction name="actionBuscar_imagen"/>
+   </widget>
+   <addaction name="menuInsertar"/>
+   <addaction name="menuBorrar"/>
+   <addaction name="menuBuscar"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionInsertar_la_imagen"/>
+   <addaction name="actionBorrar_la_imagen"/>
+   <addaction name="actionBuscar_imagen"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <property name="minimumSize">
+     <size>
+      <width>250</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>250</width>
+      <height>463</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <action name="actionInsertar_la_imagen">
+   <property name="icon">
+    <iconset resource="../recursos/recursos_1.qrc">
+     <normaloff>:/Iconos/Balcón.png</normaloff>:/Iconos/Balcón.png</iconset>
+   </property>
+   <property name="text">
+    <string>insertar_la_imagen</string>
+   </property>
+  </action>
+  <action name="actionBorrar_la_imagen">
+   <property name="icon">
+    <iconset resource="../recursos/recursos_1.qrc">
+     <normaloff>:/Iconos/Compás.png</normaloff>:/Iconos/Compás.png</iconset>
+   </property>
+   <property name="text">
+    <string>borrar_la_imagen</string>
+   </property>
+  </action>
+  <action name="actionBuscar_imagen">
+   <property name="icon">
+    <iconset resource="../recursos/recursos_1.qrc">
+     <normaloff>:/Iconos/Lápiz.png</normaloff>:/Iconos/Lápiz.png</iconset>
+   </property>
+   <property name="text">
+    <string>Buscar imagen</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../recursos/recursos_1.qrc"/>
+ </resources>
+ <connections/>
+</ui>
