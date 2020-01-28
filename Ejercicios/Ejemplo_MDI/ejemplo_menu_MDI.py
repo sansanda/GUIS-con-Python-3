@@ -4,7 +4,7 @@ import sys
 from PyQt5.QtCore import QSize
 
 sys.path.append(r"E:\repos\GUIS-con-Python-3\Ejercicios")
-from Ejercicios.App1.ejemplo_MDI_ui import *
+from Ejercicios.Ejemplo_MDI.ejemplo_MDI_ui import *
 from Ejercicios.recursos.recursos_1_rc import *
 from PyQt5.QtWidgets import QMainWindow, QStatusBar, QLabel, QListWidget, QDialog, QFileDialog, QAction, QMdiSubWindow, \
     QTextEdit, QDesktopWidget

@@ -1,7 +1,7 @@
 import sys
 
 sys.path.append(r"E:\repos\GUIS-con-Python-3\Ejercicios")
-from Ejercicios.App1.ejemplo_menu2_ui import *
+from Ejercicios.Ejemplo_menu.ejemplo_menu2_ui import *
 from Ejercicios.recursos.recursos_1_rc import *
 from PyQt5.QtWidgets import QMainWindow, QStatusBar, QLabel, QListWidget
 from PyQt5.QtGui import *

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'calculadora_simple.ui'
+# Form implementation generated from reading ui file 'Calculadora_simple.ui'
 #
 # Created by: PyQt5 UI code generator 5.13.2
 #
