@@ -1,13 +1,9 @@
-import os
 import sys
 
-from PyQt5.QtCore import QSize
-
 sys.path.append(r"E:\repos\GUIS-con-Python-3\Ejercicios")
-from Ejercicios.GetPhones.FichaPersona_ui import *
+from Ejercicios.GetPhones.uis.FichaPersona_ui import *
 from Ejercicios.recursos.recursos_1_rc import *
-from PyQt5.QtWidgets import QMainWindow, QStatusBar, QLabel, QListWidget, QDialog, QFileDialog, QAction, QMdiSubWindow, \
-    QTextEdit, QDesktopWidget
+from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtGui import *
 
 
@@ -38,11 +34,16 @@ class Ficha_Persona(QMainWindow):
         self.ui.personDataLW.addItem('Ubication: {}'.format(personData[2]))
         self.ui.personDataLW.addItem('Ext: {}'.format(personData[3]))
 
+    #phoneNumber is a String
+    def setPersonPhonenumber(self, phoneNumber):
+        self.ui.personPhoneL.setText(phoneNumber)
+
 def main():
     app = QtWidgets.QApplication(sys.argv)
     fp = Ficha_Persona()
     fp.setPersonPhoto('./photos/033.JPG')
     fp.setPersonData(('vvvvvv','bbbbbbbbbbb','nnnnnnnn','nmmmmmmmm'))
+    fp.setPersonPhonenumber('2216')
     fp.show()
     sys.exit(app.exec())
 
