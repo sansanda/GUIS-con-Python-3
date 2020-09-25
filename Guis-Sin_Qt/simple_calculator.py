@@ -7,27 +7,77 @@ e = Entry(root, width=35, borderwidth=5, state=DISABLED)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 global result
+global operator
 
 def button_click(param):
-    #e.delete(0,END)
-    #check if number
-    try:
-        digit = int(param)
+
+    #check if entry has a number or is empty
+    e_has_a_number = False
+    e_is_empty = False
+    e_has_lastcharacter_minus = False
+    e_has_lastcharacter_plus = False
+
+    param_is_digit = False
+    param_is_minus = False
+    param_is_plus = False
+    param_is_equal = False
+    param_is_clear = False
+
+    if len(e.get()) == 0:
+        e_is_empty = True
+    if str(e.get()).isdigit():
+        e_has_a_number = True
+    if str(e.get())[-1] == '-':
+        e_has_lastcharacter_minus = True
+
+    if str(param).isdigit():
+        param_is_digit = True
+    if param =='+':
+        param_is_plus = True
+        operator = '+'
+    if param == '-':
+        param_is_minus = True
+        operator = '-'
+    if param =='=':
+        param_is_equal = True
+    if param == 'clear':
+        para_is_clear = True
+
+    if param_is_clear:
         e.configure(state=NORMAL)
-        e.insert(END, digit)
+        e.delete(0,END)
         e.configure(state=DISABLED)
-    except ValueError:
-        #user click a non number button
-        text = e.get()
-        if (len(text) == 0):
-            #no previous number was entered
-            print("no previous number was entered")
+        return
+
+    if e_is_empty:
+        if param_is_minus or param_is_plus or param_is_equal: #equivalent to ask if param is not a digit
             return
         else:
-            result = int(text)
             e.configure(state=NORMAL)
             e.insert(END, param)
             e.configure(state=DISABLED)
+            return
+    else:
+        if e_has_a_number:
+            if param_is_equal:
+                return
+            else:
+                e.configure(state=NORMAL)
+                e.insert(END, param)
+                e.configure(state=DISABLED)
+                return
+        else:
+            if e_has_lastcharacter_minus or e_has_lastcharacter_plus:
+                if param_is_digit:
+                    e.configure(state=NORMAL)
+                    e.insert(END, param)
+                    e.configure(state=DISABLED)
+                return
+            else:
+                if param_is_equal:
+                    numbers = str(e.get()).split(operator)
+                return
+
 
 
 
