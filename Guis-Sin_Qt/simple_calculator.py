@@ -59,7 +59,9 @@ def button_click(param):
     e_state,param_type,operator = getCalculatorState(param, e)
 
     if param_type['param_is_clear']:
-        insertParamInEntry(param,e)
+        e.configure(state=NORMAL)
+        e.delete(0, END)
+        e.configure(state=DISABLED)
         return
 
     if e_state['e_is_empty']:
